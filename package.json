@@ -1,7 +1,7 @@
 {
   "name": "multipart-data",
   "description": "A minimal helper for you need work with multipart requests.",
-  "author": "José Aleu Núñez",
+  "author": "Pepe Aleu Núñez",
   "version": "0.1.0",
   "main": "index.js",
   "files": [
@@ -10,7 +10,11 @@
   "scripts": {
     "test": "ava"
   },
-  "repository": "PepeAleu/multipart-data",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PepeAleu/multipart-data.git"
+  },
+  "homepage": "https://github.com/PepeAleu/multipart-data",
   "keywords": [],
   "license": "MIT",
   "dependencies": {},
