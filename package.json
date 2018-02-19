@@ -1,0 +1,20 @@
+{
+  "name": "multipart-data",
+  "description": "A minimal helper for you need work with multipart requests.",
+  "author": "José Aleu Núñez",
+  "version": "0.1.0",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": "PepeAleu/multipart-data",
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "*"
+  }
+}
