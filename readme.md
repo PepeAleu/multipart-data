@@ -8,12 +8,34 @@ A minimal helper for you need work with multipart requests.
 npm install --save multipart-data
 ```
 
-## Usage
+### Import
 
 ```javascript
-var multipartData = require('multipart-data')
+import MultipartData from "multipart-data";
+```
 
-multipartData()  // => true
+### Usage
+
+```javascript
+const xhr = new XMLHttpRequest();
+const multipartData = new MultipartData('multipart/mixed');
+const header = new Map();
+const data = { foo: 'bar' };
+const image = 'Da23sdnn3wun43fskm'// Binary data to string;
+
+header.set('Content-Type', 'image/jpeg');
+header.set('Content-Length', image.length);
+multipartData.append(data, header);
+
+header.set('Content-Disposition', 'form-data');
+header.set('name', 'foo');
+header.set('filename', 'foo.json');
+header.set('Content-Type', 'application/json');
+header.set('Content-Length', data.length);
+multipartData.append(image, header);
+
+xhr.setRequestHeader("Content-type", multipartData.contentType);
+xhr.send(multipartData.multipartBody);
 ```
 
 ## License
