@@ -1,5 +1,5 @@
 {
-  "name": "multipart-data",
+  "name": "multipart-data-helper",
   "description": "A minimal helper for you need work with multipart requests.",
   "author": "Pepe Aleu Núñez",
   "version": "0.1.0",

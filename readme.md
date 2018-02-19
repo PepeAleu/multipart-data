@@ -11,7 +11,7 @@ npm install --save multipart-data
 ### Import
 
 ```javascript
-import MultipartData from "multipart-data";
+import MultipartData from "multipart-data-helper";
 ```
 
 ### Usage
