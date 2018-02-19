@@ -21,7 +21,7 @@ const xhr = new XMLHttpRequest();
 const multipartData = new MultipartData('multipart/mixed');
 const header = new Map();
 const data = { foo: 'bar' };
-const image = 'Da23sdnn3wun43fskm'// Binary data to string;
+const image = 'Da23sdnn3wun43fskm'; //Binary data to string;
 
 header.set('Content-Type', 'image/jpeg');
 header.set('Content-Length', image.length);
