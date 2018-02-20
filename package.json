@@ -2,7 +2,7 @@
   "name": "multipart-data-helper",
   "description": "A minimal helper for you need work with multipart requests.",
   "author": "Pepe Aleu Núñez",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "main": "index.js",
   "files": [
     "index.js"
