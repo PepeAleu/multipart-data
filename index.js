@@ -9,15 +9,16 @@
  * const image = 'Da23sdnn3wun43fskm'; //Binary data to string;
  * const data = { foo: 'bar' };
  *
- * header.set('Content-Type', 'image/jpeg');
- * multipartData.append(image, header);
+ * const imageHeader = new Map();
+ * imageHeader.set('Content-Type', 'image/jpeg');
+ * multipartData.append(image, imageHeader);
  *
- * header
- * .set('Content-Disposition', 'form-data')
+ * const dataHeader = new Map();
+ * dataHeader.set('Content-Disposition', 'form-data')
  * .set('name', 'foo')
  * .set('filename', 'foo.json')
  * .set('Content-Type', 'application/json');
- * multipartData.append(data, header);
+ * multipartData.append(data, dataHeader);
  *
  * xhr.setRequestHeader("Content-type", multipartData.contentType);
  * xhr.send(multipartData.multipartBody);
