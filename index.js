@@ -6,19 +6,18 @@
  * const xhr = new XMLHttpRequest();
  * const multipartData = new MultipartData('multipart/mixed');
  * const header = new Map();
+ * const image = 'Da23sdnn3wun43fskm'; //Binary data to string;
  * const data = { foo: 'bar' };
- * const image = **Binary data to string**;
  *
  * header.set('Content-Type', 'image/jpeg');
- * header.set('Content-Length', image.length);
- * multipartData.append(data, header);
- *
- * header.set('Content-Disposition', 'form-data');
- * header.set('name', 'foo');
- * header.set('filename', 'foo.json');
- * header.set('Content-Type', 'application/json');
- * header.set('Content-Length', data.length);
  * multipartData.append(image, header);
+ *
+ * header
+ * .set('Content-Disposition', 'form-data')
+ * .set('name', 'foo')
+ * .set('filename', 'foo.json')
+ * .set('Content-Type', 'application/json');
+ * multipartData.append(data, header);
  *
  * xhr.setRequestHeader("Content-type", multipartData.contentType);
  * xhr.send(multipartData.multipartBody);
@@ -68,6 +67,7 @@ export default class MultipartData {
 
       if (header instanceof Map === false && header instanceof Object) {
 
+        header['Content-Length'] = body.length;
         const headerKeys = Object.keys(header);
         const headerKeysLength = headerKeys.length;
 
@@ -79,6 +79,8 @@ export default class MultipartData {
         }
 
       } else if (header instanceof Map) {
+
+        header.set('Content-Length', body.length);
 
         for (let [key, value] of header) {
           allProperties = this._processProperty(allProperties, key, value);
